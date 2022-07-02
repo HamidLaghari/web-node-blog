@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description"
+		content="Responsive Bootstrap4 Shop Template, Created by Imran Hossain from https://imransdesign.com/">
+
+	<!-- title -->
+	<title>Blog</title>
+
+	<!-- favicon -->
+	<title>Developer</title>
+
+
+	<link rel="stylesheet" type="text/css" href="/css/meanmenu.min.css">
+
+	<link rel="stylesheet" type="text/css" href="/css/main.css">
+
+	<link rel="stylesheet" type="text/css" href="/css/responsive.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+		integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+		integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+		<header>
+			<!-- Intro settings -->
+			<style>
+				#intro {
+					/* Margin to fix overlapping fixed navbar */
+					margin-top: 58px;
+				}
+	
+				@media (max-width: 991px) {
+					#intro {
+						/* Margin to fix overlapping fixed navbar */
+						margin-top: 45px;
+					}
+				}
+				.bg{
+					background-image: url("/img/slider-1.jpg");
+					background-repeat: no-repeat;
+					background-size: cover; 
+					opacity: 0.1;
+
+				}
+				 
+			</style>
+	</head>
+
+<body>
+
+
+	
+
+		<!-- Navbar -->
+		<%- include("./navbar") %> 
+		<!-- Navbar -->
+
+		<!-- Jumbotron -->
+		 
+		<!-- Jumbotron -->
+	</header>
+	<div class="hero-area hero-bg">
+		<div class="container">
+			<div class="row bg">
+				<div class="col-lg-9 offset-lg-2 text-center">
+					<div class="hero-text">
+						<div class="hero-text-tablecell">
+							<p class="subtitle">The PHP Framework</p>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--Main Navigation-->
+
+	<!--Main layout-->
+	<main class="my-5">
+		<div class="container">
+			<!--Section: Content-->
+			<section class="text-center">
+				<div class="row">
+					<div class="col-lg-8 offset-lg-2 text-center">
+						<div class="section-title">	
+							<h3><span class="orange-text">About </span> Blog</h3>
+							<p>Laravel is a web application framework with expressive, elegant syntax. We’ve already laid the foundation — freeing you to create without sweating the small things.</p>
+						</div>
+					</div>
+				</div>
+	
+
+				<div class="row">
+ 
+						<%  for(var i =  quotes.length-1;i > (quotes.length -6) ;i--){ %>
+					<div class="col-lg-4 col-md-12 mb-4">
+						<div class="card">
+							<div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+								<img  src="/img/<%=quotes[i].image%>" class="img-fluid" />
+								<a href="#">
+									<div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+								</a>
+							</div>
+							<div class="card-body">
+								<h5 class="card-title"><%= quotes[i].title %></h5>
+								<p class="card-text">
+									<%= quotes[i].description %>
+								</p>
+								<a href="/details/<%= quotes[i]._id %>"class="btn btn-primary "> <i class="fas fa-eye"></i> &nbsp;Show Details </a>
+							
+							</div>
+						</div>
+					</div>
+					<% } %>
+ 
+				</div>
+
+				 
+			</section>
+			<!--Section: Content-->
+
+			 
+		</div>
+	</main>
+	<!--Main layout-->
+
+	<!--Footer-->
+	<footer class="bg-light text-lg-start">
+	 
+		<hr class="m-0" />
+
+		<div class="text-center py-4 align-items-center">
+			<p>Follow Developer on social media</p>
+			<a href="#" class="btn btn-primary m-1" role="button"
+				rel="nofollow" target="_blank">
+				<i class="fab fa-youtube"></i>
+			</a>
+			<a href="#" class="btn btn-primary m-1" role="button" rel="nofollow"
+				target="_blank">
+				<i class="fab fa-facebook-f"></i>
+			</a>
+			<a href="#" class="btn btn-primary m-1" role="button" rel="nofollow"
+				target="_blank">
+				<i class="fab fa-twitter"></i>
+			</a>
+			<a href="#" class="btn btn-primary m-1" role="button" rel="nofollow"
+				target="_blank">
+				<i class="fab fa-github"></i>
+			</a>
+		</div>
+
+		<!-- Copyright -->
+		<div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+			© 2020 Copyright:
+			<a class="text-dark" href="#">Developer.com</a>
+		</div>
+		<!-- Copyright -->
+	</footer>
+	<!--Footer-->
+		
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+	</body>
+	</html>
